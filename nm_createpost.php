@@ -4,8 +4,8 @@ $thisfile = basename(__FILE__, ".php");
 
 register_plugin(
 	$thisfile, 
-	'News Manager Create Post Shortcut', 	
-	'0.1', 		
+	'Create Post shortcut (News Manager)', 	
+	'0.2', 		
 	'Carlos Navarro',
 	'#', 
 	'Adds shortcut link for creating News Manager posts in Page Management sidebar',
@@ -13,11 +13,10 @@ register_plugin(
 	''
 );
 
-
 add_action('pages-sidebar', 'sidebar_nm_createpost');
 
 function sidebar_nm_createpost() { ?>
-	<li id="sb_nm_createpost" ><a href="load.php?id=news_manager&amp;edit">Create new post</a></li>
+	<li id="sb_nm_createpost" ><a href="load.php?id=news_manager&amp;edit"><?php i18n('news_manager/NEW_POST'); ?></a></li>
 <?php }
 
-// end of file
+// end
